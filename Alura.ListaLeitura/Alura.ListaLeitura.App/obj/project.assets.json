@@ -5347,11 +5347,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bubub\\Documents\\ASPNET_CORE_MVC\\ASPNET_CORE_MVC\\Alura.ListaLeitura\\Alura.ListaLeitura.App\\Alura.ListaLeitura.App.csproj",
+      "projectUniqueName": "C:\\Users\\bubub\\Documents\\ASP_NET_Core_MVC\\ASP_NET_Core_MVC\\Alura.ListaLeitura\\Alura.ListaLeitura.App\\Alura.ListaLeitura.App.csproj",
       "projectName": "Alura.ListaLeitura.App",
-      "projectPath": "C:\\Users\\bubub\\Documents\\ASPNET_CORE_MVC\\ASPNET_CORE_MVC\\Alura.ListaLeitura\\Alura.ListaLeitura.App\\Alura.ListaLeitura.App.csproj",
+      "projectPath": "C:\\Users\\bubub\\Documents\\ASP_NET_Core_MVC\\ASP_NET_Core_MVC\\Alura.ListaLeitura\\Alura.ListaLeitura.App\\Alura.ListaLeitura.App.csproj",
       "packagesPath": "C:\\Users\\bubub\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bubub\\Documents\\ASPNET_CORE_MVC\\ASPNET_CORE_MVC\\Alura.ListaLeitura\\Alura.ListaLeitura.App\\obj\\",
+      "outputPath": "C:\\Users\\bubub\\Documents\\ASP_NET_Core_MVC\\ASP_NET_Core_MVC\\Alura.ListaLeitura\\Alura.ListaLeitura.App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
