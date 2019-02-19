@@ -23,13 +23,39 @@ namespace Alura.ListaLeitura.App
             routeBuilder.MapRoute("Livros/ParaLer", LivrosParaLer);
             routeBuilder.MapRoute("Livros/Lendo", LivrosLendo);
             routeBuilder.MapRoute("Livros/Lidos", LivrosLidos);
-            routeBuilder.MapRoute("Cadastro/novolivro/{nome}/{autor}", CadastroNovoLivro);
+            routeBuilder.MapRoute("Cadastro/NovoLivro/{nome}/{autor}", CadastroNovoLivro);
             routeBuilder.MapRoute("Livros/Detalhes/{id:int}", ExibeDetalhes);
+            routeBuilder.MapRoute("Cadastro/NovoLivro", ExibeFormulario);
+            routeBuilder.MapRoute("Cadastro/Incluir", ProcessaFormulario);
             var rotas = routeBuilder.Build();
 
             app.UseRouter(rotas);
         }
 
+        private Task ProcessaFormulario(HttpContext context)
+        {
+            var livro = new Livro
+            {
+                Titulo = context.Request.Query["titulo"].First(),
+                Autor = context.Request.Query["autor"].First(),
+            };
+            var _repo = new LivroRepositorioCSV();
+            _repo.Incluir(livro);
+            return context.Response.WriteAsync("Livro incluído com sucesso");
+        }
+
+        private Task ExibeFormulario (HttpContext context)
+        {
+            var html = @"<HTML>
+        <form action ='/Cadastro/Incluir'>
+        <input name ='titulo'/>
+        <input name = 'autor'/>
+        <button>Gravar</button>
+        </form>
+        </HTML>";
+            return context.Response.WriteAsync(html);
+
+        }
         private Task ExibeDetalhes(HttpContext context)
         {
             int id = Convert.ToInt32(context.GetRouteValue("id"));
