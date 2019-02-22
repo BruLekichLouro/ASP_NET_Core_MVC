@@ -10,8 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Alura.ListaLeitura.App.Logica
-
+namespace Alura.ListaLeitura.App.Controllers
 {
     public class CadastroController
     {
