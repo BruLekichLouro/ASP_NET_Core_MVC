@@ -2,6 +2,7 @@
 using Alura.ListaLeitura.App.Repositorio;
 using Alura.ListaLeitura.App.VIEW;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using System;
 using System.Collections.Generic;
@@ -24,10 +25,10 @@ namespace Alura.ListaLeitura.App.Controller
             _repo.Incluir(livro);
             return context.Response.WriteAsync("Livro incluído com sucesso");
         }
-        public static Task ExibeFormulario(HttpContext context)
+        public IActionResult ExibeFormulario()
         {
-            var html = HTMLUtils.CarregaArquivoHTML("formulario");
-            return context.Response.WriteAsync(html);
+            var html = new ViewResult { ViewName = "formulario" };
+            return html;
         }
         
         public string Incluir(Livro livro)
